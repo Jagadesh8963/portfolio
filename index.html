@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jagadeeswar Reddy Vaddamani</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 
@@ -23,6 +26,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">certificates</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -39,6 +43,7 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#certificates" onclick="toggleMenu()">certificates</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
@@ -54,7 +59,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
+            onclick="window.open('./assets/Jagadeeswar_Reddy_resume.pdf')"
           >
             Download CV 
           </button>
@@ -90,7 +95,7 @@
                 class="icon"
               />
               <h3>YSR engineering college of YVU,</h3>
-              <p>BTech <br />COMPUTER SCIENCE ENGINEERING</p>
+              <p>B.Tech <br />COMPUTER SCIENCE ENGINEERING</p>
             </div>
             <div class="details-container">
               <img
@@ -99,7 +104,7 @@
                 class="icon"
               />
               <h3>RGUKT IIIT RKValley, Idupulapaya</h3>
-              <p>MTECH<br />AIML Branch</p>
+              <p>M.TECH<br />AIML  specialization</p>
             </div>
           </div>
           <div class="text-container">
@@ -337,17 +342,6 @@
                     <p>Experienced</p>
                   </div>
                 </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Docker</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
               </div>
             </div>
             
@@ -361,12 +355,60 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
-                alt="Project 1"
+                src="./assets/project- 1.png"
+                alt="Fruit Classification"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">PIXELVERSE</h2>
+            <h2 class="experience-sub-title project-title">Fruit Classification Using Transfer Learning</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Jagadesh8963/Fruit-Classification-using-transfer-learning'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https:fruit-classifier-jagadeswar-reddy.netlify.app'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project- 2.png"
+                alt="Speech Emotion Recognization"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Speech Emotion Recognition CNN </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Jagadesh8963/Speech_Emotion_Recognition_CNN'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://pixelverse-eoah.onrender.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project- 3.png"
+                alt="Stock"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Stock Market Prediction using LSTM</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -385,6 +427,23 @@
         </div>
         
       </div>
+
+      <div class="slider-container" id="certificates">
+        <p class="section__text__p1">GoThrough on my</p>
+        <h1 class="title">Certifications</h1>
+        <div class="slider">
+            <img src="C0.jpeg" class="slide" alt="Image 1">
+            <img src="C5.jpeg" class="slide" alt="Image 1">
+            <img src="FDP1.jpg" class="slide" alt="Image 2">
+            <img src="FDP2.jpg" class="slide" alt="Image 3">
+            <img src="C1.jpeg" class="slide" alt="Image 1">
+            <img src="C2.jpeg" class="slide" alt="Image 2">
+            <img src="C3.jpeg" class="slide" alt="Image 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
     </div>
     </section>
     <br>
@@ -406,7 +465,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:jagadeshreddy8963@gmail.com">jagadeshreddy8963@gmail.com</a></p>
+          <p><a href="mailto:jagadesh8963@gmail.com">jagadesh8963@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -425,11 +484,12 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">certificates</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>© 2024 Jagadeeswar Reddy Vaddamani. All rights reserved.</p>
+      <p>© 2025 Jagadeeswar Reddy Vaddamani. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
