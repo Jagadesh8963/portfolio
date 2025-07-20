@@ -10,6 +10,12 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <!-- Add this inside <head> -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Jagadeeswara Reddy - PG Scholar in AIML | AI Researcher | Portfolio">
+    <meta name="keywords" content="Jagadeeswara Reddy, AIML, GANs, Medical Imaging, Research, Web Developer">
+     <meta name="author" content="Jagadeeswara Reddy">
+
 
     <style>
       /* CSS code for making the image edges curved */
@@ -19,13 +25,16 @@
     </style>
   </head>
   <body>
+    
     <nav id="desktop-nav">
+      
       <div class="logo">Jagadeeswar Reddy Vaddamani</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
           <li><a href="#certificates">certificates</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -55,11 +64,14 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Jagadeeswar Reddy Vaddamani </h1>
-        <p class="section__text__p2">Machine Learning Developer</p>
+        
+        <p id="typed-text" class="section__text__p2"></p>
+        <audio id="type-sound" src="type-sound.mp3" preload="auto"></audio>
+
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/Jagadeeswar_Reddy_New_Resume.pdf')"
+            onclick="window.open('./assets/Jagadeeswar_Reddy_Resume (2).pdf')"
           >
             Download CV 
           </button>
@@ -95,7 +107,7 @@
                 class="icon"
               />
               <h3>YSR engineering college of YVU,</h3>
-              <p>B.Tech <br />COMPUTER SCIENCE ENGINEERING</p>
+              <p>B.Tech <br />COMPUTER SCIENCE and ENGINEERING</p>
             </div>
             <div class="details-container">
               <img
@@ -104,7 +116,7 @@
                 class="icon"
               />
               <h3>RGUKT IIIT RKValley, Idupulapaya</h3>
-              <p>M.TECH<br />AIML  specialization</p>
+              <p>M.TECH<br />AI&ML  specialization</p>
             </div>
           </div>
           <div class="text-container">
@@ -344,9 +356,7 @@
                 </article>
               </div>
             </div>
-            
-      
-    </section>
+     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -370,7 +380,7 @@
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https:fruit-classifier-jagadeswar-reddy.netlify.app'"
+                onclick="location.href='https://fruit-classification-using-transfer-learning-agbz9yyi9sflvc8vi.streamlit.app/'"
               >
                 Live Demo
               </button>
@@ -408,11 +418,11 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Stock Market Prediction using LSTM</h2>
+            <h2 class="experience-sub-title project-title">Improving Medical Image Quality using GANs</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Venkatesh-Maley/Pixelverse_Project'"
+                onclick="location.href='https://github.com/Jagadesh8963/Medical-Image-Enhancement-GAN'"
               >
                 Github
               </button>
@@ -427,22 +437,53 @@
         </div>
         
       </div>
+      <section id="publications">
+  <p class="section__text__p1">Academic & Conference</p>
+  <h1 class="title">Publications</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container color-container">
+        <h2 class="experience-sub-title">Improving Medical Image Quality using GANs</h2>
+        <p>
+          <strong>Conference:</strong> 8<sup>th</sup> National Level Conference on Emerging Trends in Artificial Intelligence and Network Security (NCETAINS–2025)<br>
+          <strong>Organized by:</strong> Santhiram Engineering College, Nandyal<br>
+          <strong>Presented by:</strong> Jagadeeswara Reddy Vaddamani<br>
+          <strong>Paper ID:</strong> F0016<br>
+          <strong>ISBN:</strong> 978-81-956102-4-2<br>
+          <strong>Date:</strong> 28-03-2025
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/NCETAINS2025_Improving_Medical_Image_Quality_GANs_Vaddamani (Updated).pdf')">
+            📄 View Paper
+          </button>
+          <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/C0.jpeg')">
+            📜 View Certificate
+          </button>
+          <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/Improving Medical Image Quality Using GANs New.pdf')">
+            📽️ Download PPT
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <div class="slider-container" id="certificates">
         <p class="section__text__p1">GoThrough on my</p>
         <h1 class="title">Certifications</h1>
         <div class="slider">
 
-            <img src="C0.jpeg" class="slide" alt="Image 1">
-            <img src="C5.jpeg" class="slide" alt="Image 1">
+            <img src="C0.jpeg" class="slide" alt="Confernce Paper(M.tech)">
+            <img src="C6.jpeg" class="slide" alt="Certificate of Internationa Yoga Day-2025">
 
-            <img src="C5.jpeg" class="slide" alt="Image 5">
+            <img src="C5.jpeg" class="slide" alt="Certificate of excellence">
 
-            <img src="FDP1.jpg" class="slide" alt="Image 2">
-            <img src="FDP2.jpg" class="slide" alt="Image 3">
-            <img src="C1.jpeg" class="slide" alt="Image 1">
-            <img src="C2.jpeg" class="slide" alt="Image 2">
-            <img src="C3.jpeg" class="slide" alt="Image 3">
+            <img src="FDP1.jpg" class="slide" alt="FDP 1">
+            <img src="FDP2.jpg" class="slide" alt="FDP 2">
+            <img src="C1.jpeg" class="slide" alt="NPTEL- Computer Networks and Internet Protocol">
+            <img src="C2.jpeg" class="slide" alt="NPTEL - Data Mining">
+            <img src="C3.jpeg" class="slide" alt="NPTEL - Enhancing Soft Skills">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -450,6 +491,13 @@
 
     </div>
     </section>
+    <!-- ====== Daily Quote Section ====== -->
+<section id="daily-quote-section" class="container my-5">
+  <h3 class="text-center mb-3">Quote of the Day</h3>
+  <div id="quote-category" class="text-center fw-bold mb-2"></div>
+  <div id="daily-quote" class="text-center fst-italic">Loading quote...</div>
+</section>
+
     <br>
     <br>
     <br>
@@ -496,5 +544,8 @@
       <p>© 2025 Jagadeeswar Reddy Vaddamani. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
   </body>
 </html>
