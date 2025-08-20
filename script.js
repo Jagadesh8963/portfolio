@@ -37,6 +37,7 @@ window.onscroll = function () {
 const typedTextElement = document.getElementById("typed-text");
 
 const textArray = [
+  { text: "Assistant Professor - CSE (AI&ML)", color: "#ff1493" },
   { text: "PG Scholar in AIML", color: "#007bff" },     // blue
   { text: "AI Researcher", color: "#28a745" },           // green
   { text: "Working on GANs & ESRGAN", color: "#dc3545" }, // red
