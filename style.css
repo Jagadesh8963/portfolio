@@ -171,7 +171,8 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 30vh;
+  height: auto;           /* ✅ FIX */
+  padding-bottom: 2rem;   /* optional spacing */
 }
 
 .section__pic-container {

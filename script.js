@@ -26,7 +26,7 @@ function showSlideAuto() {
 showSlideAuto();
 
 // Scroll-to-top button visibility and smooth scroll
-let topBtn = document.getElementById("topBtn");
+let topBtn = document.getElementById("scrollTopBtn");
 window.onscroll = function () {
   topBtn.style.display =
     document.body.scrollTop > 200 || document.documentElement.scrollTop > 200
@@ -108,5 +108,7 @@ const quotes = [
 
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
   document.getElementById("daily-quote").innerText = quote;
-
+document.addEventListener("DOMContentLoaded", function () {
+  showSlideAuto();
+});
 
