@@ -1,7 +1,7 @@
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+    height: auto;
+    margin-bottom: 2rem;
   }
   .about-containers {
     flex-wrap: wrap;
@@ -23,7 +23,6 @@
   .experience-details-container {
     margin-top: 0.5rem;
   }
-  #profile,
   .section-container {
     display: block;
   }
@@ -37,13 +36,61 @@
   section {
     margin: 0 5%;
   }
+
+  /* Profile: column stack, properly spaced */
+  #profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1rem 2rem;
+    height: auto;
+    min-height: unset;
+  }
   .section__pic-container {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+  .photo-frame-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+  .section__text {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+  .btn-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 0.75rem;
+  }
+  .btn {
+    width: auto;
+    min-width: 7rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+  }
+  #socials-container {
+    margin-top: 0.75rem;
+    justify-content: center;
+  }
+
+  .about-containers {
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
+  /* About section pic */
+  #about .section__pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
   }
 
   /* Skills: 2x2 grid on tablet */
@@ -75,7 +122,6 @@
   #experience .about-containers {
     grid-template-columns: 1fr;
   }
-
   /* Projects: single column */
   #projects .details-container {
     flex: 1 1 100%;
@@ -85,11 +131,20 @@
 @media screen and (max-width: 600px) {
   #contact,
   footer {
-    height: 40vh;
+    height: auto;
   }
   #profile {
-    height: 83vh;
-    margin-bottom: 0;
+    padding: 1.5rem 0.75rem;
+    gap: 1rem;
+  }
+  .section__pic-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  .photo-frame-wrapper {
+    width: 180px;
+    height: 180px;
   }
 
   /* Skills: single column, compact */
@@ -157,18 +212,19 @@
     gap: 0.5rem;
     text-align: center;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    min-height: 1.6rem;
   }
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .text-container {
     text-align: justify;
+  }
+  .btn {
+    width: auto;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.85rem;
   }
 }

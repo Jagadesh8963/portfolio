@@ -2,7 +2,11 @@
 window.addEventListener("load", function () {
   const loader = document.getElementById("loader");
   if (loader) {
-    loader.style.display = "none";
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 0.5s ease";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
   }
 });
 
@@ -21,6 +25,7 @@ function toggleMenu() {
 // Certificate Slider
 // =====================
 let autoSlideIndex = 0;
+let manualSlideIndex = 0;
 const slides = document.querySelectorAll(".slide");
 
 function showSlideAuto() {
@@ -30,9 +35,20 @@ function showSlideAuto() {
     slide.style.display = index === autoSlideIndex ? "block" : "none";
   });
 
+  manualSlideIndex = autoSlideIndex;
   autoSlideIndex = (autoSlideIndex + 1) % slides.length;
 
   setTimeout(showSlideAuto, 3000);
+}
+
+function moveSlide(direction) {
+  if (slides.length === 0) return;
+  manualSlideIndex = (manualSlideIndex + direction + slides.length) % slides.length;
+  autoSlideIndex = (manualSlideIndex + 1) % slides.length;
+
+  slides.forEach((slide, index) => {
+    slide.style.display = index === manualSlideIndex ? "block" : "none";
+  });
 }
 
 // =====================
