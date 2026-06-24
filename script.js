@@ -18,39 +18,6 @@ function toggleMenu() {
 }
 
 // =====================
-// Dark Mode Toggle
-// =====================
-function toggleDarkMode() {
-  const body = document.body;
-  const isDark = body.classList.toggle("dark-mode");
-
-  // Save preference
-  localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
-
-  // Update both desktop and mobile toggle button labels
-  updateDarkModeButtons(isDark);
-}
-
-function updateDarkModeButtons(isDark) {
-  const icon = document.getElementById("dm-icon");
-  const label = document.getElementById("dm-label");
-  if (icon) icon.textContent = isDark ? "☀️" : "🌙";
-  if (label) label.textContent = isDark ? "Light" : "Dark";
-}
-
-// Apply saved dark mode preference on load
-(function () {
-  const saved = localStorage.getItem("darkMode");
-  if (saved === "enabled") {
-    document.body.classList.add("dark-mode");
-    // Buttons update after DOM is ready
-    document.addEventListener("DOMContentLoaded", function () {
-      updateDarkModeButtons(true);
-    });
-  }
-})();
-
-// =====================
 // Certificate Slider
 // =====================
 let autoSlideIndex = 0;
@@ -66,25 +33,6 @@ function showSlideAuto() {
   autoSlideIndex = (autoSlideIndex + 1) % slides.length;
 
   setTimeout(showSlideAuto, 3000);
-}
-
-function moveSlide(direction) {
-  if (slides.length === 0) return;
-
-  slides[autoSlideIndex === 0 ? slides.length - 1 : autoSlideIndex - 1].style.display = "none";
-
-  // Recalculate current visible slide
-  let currentVisible = -1;
-  slides.forEach((s, i) => {
-    if (s.style.display === "block") currentVisible = i;
-  });
-
-  if (currentVisible === -1) currentVisible = 0;
-
-  slides[currentVisible].style.display = "none";
-  let newIndex = (currentVisible + direction + slides.length) % slides.length;
-  slides[newIndex].style.display = "block";
-  autoSlideIndex = (newIndex + 1) % slides.length;
 }
 
 // =====================
@@ -124,7 +72,8 @@ function eraseText() {
   const current = textArray[arrayIndex];
 
   if (charIndex > 0) {
-    typedTextElement.textContent = current.text.substring(0, charIndex - 1);
+    typedTextElement.textContent =
+      current.text.substring(0, charIndex - 1);
     charIndex--;
     setTimeout(eraseText, 50);
   } else {
@@ -140,7 +89,8 @@ window.addEventListener("scroll", function () {
   const topBtn = document.getElementById("scrollTopBtn");
 
   if (topBtn) {
-    topBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    topBtn.style.display =
+      window.scrollY > 200 ? "block" : "none";
   }
 });
 
@@ -157,7 +107,7 @@ function scrollToTop() {
 const quotes = [
   "Education is the most powerful weapon which you can use to change the world. – Nelson Mandela",
   "The beautiful thing about learning is that no one can take it away from you. – B.B. King",
-  "You miss 100% of the shots you don't take. – Wayne Gretzky",
+  "You miss 100% of the shots you don’t take. – Wayne Gretzky",
   "Hard work beats talent when talent doesn't work hard. – Tim Notke",
   "Believe you can and you're halfway there. – Theodore Roosevelt",
   "Success is not final, failure is not fatal: it is the courage to continue that counts. – Winston Churchill",
@@ -173,12 +123,6 @@ const quotes = [
 // =====================
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Apply dark mode label if already saved
-  const savedDark = localStorage.getItem("darkMode") === "enabled";
-  if (savedDark) {
-    updateDarkModeButtons(true);
-  }
-
   // Start Typing Animation
   if (textArray.length > 0 && typedTextElement) {
     typeText();
@@ -191,51 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Load Daily Quote
   const quoteElement = document.getElementById("daily-quote");
+
   if (quoteElement) {
-    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    const quote =
+      quotes[Math.floor(Math.random() * quotes.length)];
     quoteElement.innerText = quote;
   }
-
-});
-// Skills Highlight
-document.addEventListener("DOMContentLoaded", function () {
-
-  const skills = document.querySelectorAll("article h3");
-
-  let currentSkill = 0;
-
-  setInterval(() => {
-
-    skills.forEach(skill =>
-      skill.classList.remove("skill-blink")
-    );
-
-    skills[currentSkill].classList.add("skill-blink");
-
-    currentSkill = (currentSkill + 1) % skills.length;
-
-  }, 1000);
-
-});
-// Research & Teaching Animation
-document.addEventListener("DOMContentLoaded", function () {
-
-  const items = document.querySelectorAll(
-    ".research-list span, .teaching-list span"
-  );
-
-  let current = 0;
-
-  setInterval(() => {
-
-    items.forEach(item =>
-      item.classList.remove("active-item")
-    );
-
-    items[current].classList.add("active-item");
-
-    current = (current + 1) % items.length;
-
-  }, 1000);
-
 });
