@@ -10,6 +10,28 @@ window.addEventListener("load", function () {
   }
 });
 
+// =====================
+// Profile Photo - Slow reveal (scale up) then spin border PERMANENTLY
+// =====================
+window.addEventListener("load", function () {
+  const wrapper = document.querySelector(".photo-frame-wrapper");
+
+  if (wrapper) {
+    // Step 1: After 400ms — slowly scale up and fade in (1.8s transition via CSS)
+    setTimeout(function () {
+      wrapper.classList.add("revealed");
+    }, 400);
+
+    // Step 2: After reveal finishes — start spinning border forever
+    setTimeout(function () {
+      wrapper.classList.add("spin-active");
+      // Lock it permanently — nothing can hide it
+      wrapper.style.opacity = "1";
+      wrapper.style.visibility = "visible";
+    }, 2400);
+  }
+});
+
 // Toggle Mobile Menu
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
@@ -123,7 +145,7 @@ function scrollToTop() {
 const quotes = [
   "Education is the most powerful weapon which you can use to change the world. – Nelson Mandela",
   "The beautiful thing about learning is that no one can take it away from you. – B.B. King",
-  "You miss 100% of the shots you don’t take. – Wayne Gretzky",
+  "You miss 100% of the shots you don't take. – Wayne Gretzky",
   "Hard work beats talent when talent doesn't work hard. – Tim Notke",
   "Believe you can and you're halfway there. – Theodore Roosevelt",
   "Success is not final, failure is not fatal: it is the courage to continue that counts. – Winston Churchill",
@@ -156,5 +178,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const quote =
       quotes[Math.floor(Math.random() * quotes.length)];
     quoteElement.innerText = quote;
+  }
+});
+// Photo frame border hidden — spinning wrapper handles it
+
+// =====================
+// Navbar fade on scroll (visual only)
+// =====================
+window.addEventListener("scroll", function () {
+  var nav = document.getElementById("desktop-nav");
+  if (nav) {
+    if (window.scrollY > 40) {
+      nav.style.background = "rgba(255,255,255,0.97)";
+      nav.style.boxShadow = "0 4px 24px rgba(0,114,255,0.12)";
+    } else {
+      nav.style.background = "rgba(255,255,255,0.88)";
+      nav.style.boxShadow = "0 2px 18px rgba(0,114,255,0.07)";
+    }
   }
 });
