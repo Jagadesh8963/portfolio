@@ -56,12 +56,12 @@
     <section id="profile">
       <div class="section__pic-container">
         <div class="photo-frame-wrapper">
-          <img src="./assets/Jagadesh_Photo.jpeg" alt="Jagadeeswar Reddy Vaddamani profile picture" class="profile-photo" />
+          <img src="./assets/Jagadesh_Phtoto_whatsapp.jpeg" alt="Jagadeeswar Reddy Vaddamani profile picture" class="profile-photo" />
           <div class="photo-frame-border"></div>
         </div>
       </div>
       <div class="section__text" data-aos="fade-left" data-aos-delay="300">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1" data-i18n="hello_im">Hello, I'm</p>
         <h1 class="title">Jagadeeswar Reddy Vaddamani </h1>
         
         <p id="typed-text" class="section__text__p2"></p>
@@ -116,8 +116,8 @@
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1" data-aos="fade-up">Get To Know More</p>
-      <h1 class="title" data-aos="fade-up" data-aos-delay="100">About Me</h1>
+      <p class="section__text__p1" data-aos="fade-up" data-i18n="get_to_know">Get To Know More</p>
+      <h1 class="title" data-aos="fade-up" data-aos-delay="100" data-i18n="about_me">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container" data-aos="fade-right" data-aos-duration="900">
           <img
@@ -135,7 +135,7 @@
                 class="icon"
               />
               <h3>YSR engineering college of YVU,</h3>
-              <p>B.Tech <br />COMPUTER SCIENCE and ENGINEERING</p>
+              <p data-i18n="btech_desc">B.Tech <br />COMPUTER SCIENCE and ENGINEERING</p>
             </div>
             <div class="details-container">
               <img
@@ -177,8 +177,8 @@
       
     </section>
     <section id="experience">
-      <p class="section__text__p1" data-aos="fade-up">Explore My</p>
-      <h1 class="title" data-aos="fade-up" data-aos-delay="100">Skills</h1>
+      <p class="section__text__p1" data-aos="fade-up" data-i18n="explore_my">Explore My</p>
+      <h1 class="title" data-aos="fade-up" data-aos-delay="100" data-i18n="skills">Skills</h1>
       <div class="experience-details-container">
         <div class="about-containers">
             <div class="details-container" data-aos="fade-up" data-aos-delay="100">
@@ -401,7 +401,7 @@
             </div>
      </section>
     <section id="projects">
-      <p class="section__text__p1" data-aos="fade-up">Browse My Recent</p>
+      <p class="section__text__p1" data-aos="fade-up" data-i18n="browse_recent">Browse My Recent</p>
       <h1 class="title" data-aos="fade-up" data-aos-delay="100">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
@@ -482,7 +482,7 @@
       </div>
       <br>
       <section id="patents">
-  <p class="section__text__p1">Intellectual Property</p>
+  <p class="section__text__p1" data-i18n="intellectual_property">Intellectual Property</p>
   <h1 class="title">Patents</h1>
   <div class="experience-details-container">
     <div class="about-containers">
@@ -579,7 +579,7 @@
 </section>
 
       <div class="slider-container" id="certificates">
-        <p class="section__text__p1">GoThrough on my</p>
+        <p class="section__text__p1" data-i18n="go_through">GoThrough on my</p>
         <h1 class="title">Certifications</h1>
         <div class="slider">
           <img src="Workshop.jpeg" class="slide" alt="Industry Development Faculty Workshop">
@@ -606,14 +606,14 @@
     </section>
     <!-- ====== Daily Quote Section ====== -->
 <section id="daily-quote-section" class="container my-5">
-  <h3 class="text-center mb-3">Quote of the Day</h3>
+  <h3 class="text-center mb-3" data-i18n="quote_of_day">Quote of the Day</h3>
   <div id="quote-category" class="text-center fw-bold mb-2"></div>
   <div id="daily-quote" class="text-center fst-italic">Loading quote...</div>
 </section>
 
     <section id="contact">
       
-      <p class="section__text__p1" data-aos="fade-up">Get in Touch</p>
+      <p class="section__text__p1" data-aos="fade-up" data-i18n="get_in_touch">Get in Touch</p>
       <h1 class="title" data-aos="fade-up" data-aos-delay="100">Contact Me</h1>
       <div class="contact-info-upper-container" data-aos="zoom-in" data-aos-delay="200">
         <div class="contact-info-container">
@@ -673,6 +673,7 @@
           </ul>
         </div>
       </nav>
+      <div id="visitor-counter"><span class="visitor-icon">👁️</span> Visitors: <span id="visitor-count">...</span></div>
       <p>© 2025 Jagadeeswar Reddy Vaddamani. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
@@ -686,7 +687,27 @@
       });
     </script>
     
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0072ff"/><stop offset="100%" style="stop-color:#00c6ff"/></linearGradient></defs></svg>
+<div id="scrollTopBtn" onclick="scrollToTop()" title="Back to top"><svg class="progress-ring" width="52" height="52"><circle class="progress-ring__bg" cx="26" cy="26" r="22"/><circle class="progress-ring__circle" cx="26" cy="26" r="22"/></svg><span class="rocket-icon">🚀</span></div>
 
-  </body>
+  
+<!-- ── Cursor Trail Canvas ── -->
+<canvas id="cursor-trail-canvas"></canvas>
+
+<!-- ── Welcome Toast ── -->
+<div id="welcome-toast">
+  <span id="toast-icon">👋</span>
+  <span id="toast-msg">Welcome back! Glad to see you again.</span>
+  <button id="toast-close" onclick="document.getElementById('welcome-toast').classList.remove('show')">✕</button>
+</div>
+
+<!-- ── Language Toggle ── -->
+<div id="lang-toggle" title="Switch Language">
+  <button id="lang-btn" onclick="toggleLanguage()">
+    <span id="lang-flag">🇮🇳</span>
+    <span id="lang-label">తెలుగు</span>
+  </button>
+</div>
+
+</body>
 </html>

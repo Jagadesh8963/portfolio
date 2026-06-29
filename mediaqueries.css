@@ -88,9 +88,23 @@
 
   /* About section pic */
   #about .section__pic-container {
-    width: 275px;
-    height: 275px;
+    width: 300px;
+    height: auto;
     margin: 0 auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about .about-pic {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    display: block;
+    margin: 0 auto;
+  }
+  #contact {
+    margin: 0 5%;
+    align-items: center;
   }
 
   /* Skills: 2x2 grid on tablet */
@@ -133,6 +147,14 @@
   footer {
     height: auto;
   }
+  #contact {
+    margin: 0 5%;
+    align-items: center;
+  }
+  .contact-info-upper-container {
+    width: 100%;
+    margin: 1rem auto;
+  }
   #profile {
     padding: 1.5rem 0.75rem;
     gap: 1rem;
@@ -140,6 +162,19 @@
   .section__pic-container {
     width: 180px;
     height: 180px;
+    margin: 0 auto;
+  }
+  #about .section__pic-container {
+    width: 85vw;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+  }
+  #about .about-pic {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    display: block;
     margin: 0 auto;
   }
   .photo-frame-wrapper {
